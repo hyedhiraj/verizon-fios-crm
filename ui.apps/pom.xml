@@ -220,5 +220,12 @@
             <groupId>com.day.cq.wcm</groupId>
             <artifactId>cq-wcm-taglib</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.adobe.acs</groupId>
+            <artifactId>acs-aem-commons-content</artifactId>
+            <version>3.19.0</version>
+            <type>content-package</type>
+            <classifier>min</classifier>
+        </dependency>
     </dependencies>
 </project>
