@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<div data-sly-test="${wcmmode.edit && !properties.columns}">
+	DOUBLE CLICK TO CONFIGURE COLUMN CONTROL COMPONENT...
+</div>
+<div data-sly-test="${properties.columns}" class="container">
+    <sly data-sly-use.columnControl="columnControl.js"/>
+    <div class="row">
+    	<sly data-sly-list="${columnControl}">
+            <sly data-sly-test.parResource="${ 'par{0}' @format=[itemList.index]}"/>
+            <div class="col-xs-12 col-sm-${item}" data-sly-resource="${ parResource @ resourceType='foundation/components/parsys'}"></div>
+        </sly>
+    </div>
+</div>

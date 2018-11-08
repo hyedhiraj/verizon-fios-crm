@@ -1,0 +1,25 @@
+<div data-sly-test="${wcmmode.edit && !properties.desktopLogoLink}">
+	DOUBLE CLICK TO CONFIGURE GLOBAL MAIN NAVIGATION COMPONENT...
+</div>
+<div data-sly-test="${properties.desktopLogoLink}">
+	<table align="right">
+    	<tr>
+        	<th>Font Style</th>
+            <th></th>
+            <th></th>
+            <th></th>
+		</tr>
+    	<tr>
+        	<td>${properties.fontStyle}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+		</tr>
+    </table>
+    <a href="${properties.desktopLogoLink}"><img src="${properties.desktopLogo}" alt="${properties.desktopAltText}" /></a> 
+    <div data-sly-use.multiItem="com.verizon.fios.core.sightly.use.TouchMultiFieldComponentUse">
+        <div data-sly-list.menu="${multiItem.multiFieldItems}" align="right">
+            <a href="${menu.path}" >${menu.name}</a>
+        </div>
+    </div>
+</div>

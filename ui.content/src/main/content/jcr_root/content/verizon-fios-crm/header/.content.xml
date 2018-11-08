@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-11-08T10:58:31.121+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/verizon-fios-crm/templates/header"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="header"
+        sling:resourceType="verizon-fios-crm/components/structure/header">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <text
+                jcr:created="{Date}2018-11-02T19:18:28.030+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-11-02T19:20:40.493+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/text"
+                text="&lt;p style=&quot;text-align: left;&quot;>You Deserve this exclusive gift&lt;/p>&#xa;"
+                textIsRich="true"/>
+            <globalmainnavigation
+                jcr:created="{Date}2018-11-02T12:14:00.193+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-11-08T10:58:31.118+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="verizon-fios-crm/components/content/globalMainNavigation"
+                desktopAltText="test"
+                desktopLogo="/content/dam/fios-crm/images.png"
+                desktopLogoLink="te"
+                fontStyle="medium"
+                links="[{&quot;name&quot;:&quot;My Verizon&quot;\,&quot;path&quot;:&quot;https://my.verizon.com/home&quot;},{&quot;name&quot;:&quot;Support&quot;\,&quot;path&quot;:&quot;https://verizon.com/help&quot;},{&quot;name&quot;:&quot;My Rewards+&quot;\,&quot;path&quot;:&quot;https://my.verizon.com/rewards&quot;}]"
+                mobileLogo="/content/dam/verizon-fios-crm/fios.png"/>
+        </par>
+    </jcr:content>
+</jcr:root>

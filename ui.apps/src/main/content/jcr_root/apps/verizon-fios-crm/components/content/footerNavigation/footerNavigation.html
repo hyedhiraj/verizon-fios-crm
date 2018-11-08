@@ -1,0 +1,10 @@
+<div data-sly-test="${wcmmode.edit && !properties.links}">
+	DOUBLE CLICK TO CONFIGURE FOOTER NAVIGATION COMPONENT...
+</div>
+<div data-sly-test="${properties.links}">
+    <div data-sly-use.multiItem="com.verizon.fios.core.sightly.use.TouchMultiFieldComponentUse">
+        <div data-sly-list.menu="${multiItem.multiFieldItems}" align="left">
+            <a href="${menu.path}" >${menu.name}</a>
+        </div>
+    </div>
+</div>
