@@ -3,7 +3,7 @@
     jcr:description="Email Template"
     jcr:primaryType="cq:Template"
     jcr:title="Email Template"
-    allowedPaths="[/content/fios-crm(/.*)?]"
+    allowedPaths="[/content/verizon-fios-crm(/.*)?]"
     ranking="{Long}100">
     <jcr:content
         jcr:primaryType="cq:PageContent"
