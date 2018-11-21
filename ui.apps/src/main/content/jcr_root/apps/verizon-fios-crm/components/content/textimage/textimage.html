@@ -1,10 +1,10 @@
 <div data-sly-test="${wcmmode.edit && !properties.fileReference && !properties.text}">
-	DOUBLE CLICK TO CONFIGURE TEXT & IMAGE COMPONENT...
+    DOUBLE CLICK TO CONFIGURE TEXT & IMAGE COMPONENT...
 </div>
 
 <div class="container">
-	<sly data-sly-test="${properties.fileReference}">
-		<img src="${properties.fileReference}" alt="Snow">
+    <sly data-sly-test="${properties.fileReference}">
+        <img src="${properties.fileReference}" alt="${properties.alt}" class="responsive">
     </sly>
     <sly data-sly-test="${properties.text}">
         <div class="top-${properties.alignment}">${properties.text @ context='html'}</div>
@@ -13,9 +13,9 @@
 
 <style>
     .container {
-    	position: relative;
+        position: relative;
     }
-	.top-left {
+    .top-left {
         position: absolute;
         top: 0px;
         left: 16px;
@@ -26,6 +26,10 @@
         top: 0px;
         right: 16px;
         color: red;
+    }
+    .responsive {
+        max-width: 100%;
+        height: auto;
     }
 </style>
 
