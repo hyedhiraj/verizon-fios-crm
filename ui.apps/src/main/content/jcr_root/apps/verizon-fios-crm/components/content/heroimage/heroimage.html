@@ -1,0 +1,54 @@
+<div data-sly-test="${wcmmode.edit && !properties.fileReference}">
+	DOUBLE CLICK TO CONFIGURE HREO IMAGE COMPONENT...
+</div>
+
+<div class="container">
+	<sly data-sly-test="${properties.fileReference}">
+		<sly data-sly-test="${properties.linkURL}">
+			<a href="${properties.linkURL}">
+        </sly>
+				<img src="${properties.fileReference}" alt="{properties.alt}" class="responsive">
+		<sly data-sly-test="${properties.linkURL}">
+			</a>
+        </sly>
+    </sly>
+
+    <sly data-sly-test="${properties.title}">
+        <div class="top-left">
+        	${properties.title @ context='html'}
+            <sly data-sly-test="${properties.label}">
+            	<sly data-sly-test="${properties.link}">
+                    <a href="${properties.link}">
+                </sly>
+					<button class="button" type="button">${properties.label}</button>
+				<sly data-sly-test="${properties.link}">
+                    </a>
+                </sly>
+            </sly>
+		</div>
+    </sly>
+</div>
+
+<style>
+    .container {
+    	position: relative;
+    }
+	.top-left {
+        position: absolute;
+        top: 0px;
+        left: 16px;
+    }
+    .responsive {
+        max-width: 100%;
+        height: auto;
+    }
+    .button {
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        cursor:pointer;
+        overflow: hidden;
+        outline:none;
+        border-radius: 12px;
+    }
+</style>
+
