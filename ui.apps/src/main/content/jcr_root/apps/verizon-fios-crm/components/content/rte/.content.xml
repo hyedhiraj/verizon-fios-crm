@@ -4,4 +4,4 @@
     jcr:primaryType="cq:Component"
     jcr:title="RTE Component"
     allowedParents="[*/parsys]"
-    componentGroup="fios-crm"/>
+    componentGroup="verizon-fios-crm"/>
