@@ -1,35 +1,77 @@
-<div data-sly-test="${wcmmode.edit && !properties.fileReference && !properties.text}">
-    DOUBLE CLICK TO CONFIGURE TEXT & IMAGE COMPONENT...
+<sly data-sly-use.model="${'com.verizon.fios.core.models.content.image.ImageModel'}"/>
+<div data-sly-test="${wcmmode.edit}"
+    data-emptytext="Text & Image Component" class="cq-placeholder cq-marker-start" 
+    style="
+        min-height: 50px;">
+    Text & Image Component
 </div>
+<sly data-sly-test="${model.alignment=='leftImageRightText'}" >
+    <sly data-sly-test.paddingA="0;" />
+    <sly data-sly-test.paddingB="var(--global-padding-left) var(--global-padding-top);" />
+    <sly data-sly-test.contentA="<a href='${model.href}' target='_blank'>
+    	<img src='${model.fileReference @ context='uri'}' alt='${model.alt}' title='${model.alt}' 
+        	style='
+            	width: 100%; 
+                display: block; 
+                border-width: 0; 
+                -ms-interpolation-mode: bicubic; 
+                font-size: 18px; 
+                line-height: 22px; 
+                text-align: left; 
+                color: var(--img-alt-text-color);'/>
+      </a>" />
+    <sly data-sly-test.contentB="${model.description @ context='html'}" />
+</sly>
+<sly data-sly-test="${model.alignment=='rightImageLeftText'}" >
+    <sly data-sly-test.paddingA="var(--global-padding-left) var(--global-padding-top);" />
+    <sly data-sly-test.paddingB="0;" />
+    <sly data-sly-test.contentA="${model.description @ context='html'}" />
+    <sly data-sly-test.contentB="<a href='${model.href}' target='_blank'>
+    	<img src='${model.fileReference @ context='uri'}' alt='${model.alt}' title='${model.alt}' 
+        	style='
+            	width: 100%; 
+                display: block; 
+                border-width: 0; 
+                -ms-interpolation-mode: bicubic; 
+                font-size: 18px; 
+                line-height: 22px; 
+                text-align: left; 
+                color: var(--img-alt-text-color);'/>
+      </a>" />
+</sly>
+<table border="0" cellpadding="0" cellspacing="0" align="left" class="text-spolight"
+    style="
+    	width: 100%;
+    	border-spacing: 0;
+        border-collapse: collapse;
+        mso-table-lspace: 0;
+        mso-table-rspace: 0;
+        width: 100%;
+        background-color: var(--brand-right-side-bg-color);
+        color: var(--brand-right-side-text-color);
+        min-height: 720px;">
+    <tr>
+        <td align="left" valign="top" 
+            style="
+                width: 50%; 
+                border-collapse: collapse; 
+                mso-table-lspace: 0; 
+                mso-table-rspace: 0; 
+                vertical-align: top; 
+                padding: ${paddingA @ context = 'styleString'}">
+			${contentA @ context='html'}
+        </td>
+        <td align="left" valign="top"
+            style="
+            	width: 50%; 
+            	border-collapse: collapse; 
+            	mso-table-lspace: 0; 
+            	mso-table-rspace: 0; 
+            	vertical-align: top;
+            	padding: ${paddingB @ context = 'styleString'}">
+			${contentB @ context='html'}
+        </td>
+    </tr>
+</table>
 
-<div class="container">
-    <sly data-sly-test="${properties.fileReference}">
-        <img src="${properties.fileReference}" alt="${properties.alt}" class="responsive">
-    </sly>
-    <sly data-sly-test="${properties.text}">
-        <div class="top-${properties.alignment}">${properties.text @ context='html'}</div>
-    </sly>
-</div>
-
-<style>
-    .container {
-        position: relative;
-    }
-    .top-left {
-        position: absolute;
-        top: 0px;
-        left: 16px;
-        color: red;
-    }
-    .top-right {
-        position: absolute;
-        top: 0px;
-        right: 16px;
-        color: red;
-    }
-    .responsive {
-        max-width: 100%;
-        height: auto;
-    }
-</style>
-
+<div data-sly-test="${wcmmode.edit}"style="clear: both;"></div>

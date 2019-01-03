@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Text and Image Spotlight">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <alignment
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Layout Alignment"
+            name="./alignment"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <o1
+                    jcr:primaryType="nt:unstructured"
+                    text="Right Image Left Text"
+                    value="rightImageLeftText"/>
+                <o2
+                    jcr:primaryType="nt:unstructured"
+                    text="Left Image Right Text"
+                    value="leftImageRightText"/>
+            </options>
+        </alignment>
+        <image
+            jcr:primaryType="cq:Widget"
+            border="true"
+            cropParameter="./imageCrop"
+            ddGroups="[media]"
+            fieldLabel="Image"
+            fileNameParameter="./fileName"
+            fileReferenceParameter="./fileReference"
+            height="400"
+            hideLabel="false"
+            mapParameter="./imageMap"
+            name="./file"
+            requestSuffix="/image.img.png"
+            rotateParameter="./imageRotate"
+            sizeLimit="100"
+            xtype="html5smartimage"/>
+        <alt
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Alt Text"
+            name="./jcr:alt"
+            xtype="textfield"/>
+        <href
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Destination link image"
+            name="./jcr:href"
+            xtype="browsefield"/>
+        <description
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Text Spotlight"
+            hideLabel="{Boolean}false"
+            name="./jcr:description"
+            xtype="richtext">
+            <rtePlugins jcr:primaryType="nt:unstructured">
+                <subsuperscript
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+            </rtePlugins>
+        </description>
+    </items>
+</jcr:root>

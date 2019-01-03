@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/default"
+        cq:lastModified="{Date}2018-12-07T01:09:01.857-05:00"
+        cq:lastModifiedBy="admin"
+        cq:targetEngine="cq_campaign"
+        cq:template="/apps/verizon-fios-crm/templates/acEmailCustom"
+        jcr:description="demo description"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="demo"
+        sling:resourceType="verizon-fios-crm/components/structure/acEmailCustom"
+        acMapping="mapRecipientCustom"
+        acTemplateId="mailAEMContent"
+        acTemplateLabel="Email delivery with AEM content - custom"
+        teaserPageType="newsletter">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="mcm/campaign/components/parsys">
+            <heroimage
+                jcr:created="{Date}2018-12-05T10:34:39.432-06:00"
+                jcr:createdBy="admin"
+                jcr:description="Don't turn your back on him."
+                jcr:lastModified="{Date}2018-12-07T01:04:26.665-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="verizon-fios-crm/components/content/heroImage"
+                altLogoImage="Showtime"
+                fileReference="/content/dam/verizon-fios-crm/hero-image.png"
+                imageRotate="0"
+                textImage="Don't turn your back on him."
+                textIsRich="true">
+                <image
+                    jcr:lastModified="{Date}2018-12-05T11:15:34.167-06:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    fileLogoReference="/content/dam/verizon-fios-crm/showtime-logo.png"
+                    fileReference="/content/dam/verizon-fios-crm/hero-image.png"
+                    imageCrop="[,]"
+                    imageMap="[,]"
+                    imageRotate="[0,0]"/>
+                <bottomText
+                    jcr:lastModified="{Date}2018-12-05T11:16:12.304-06:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="verizon-fios-crm/components/content/text"
+                    background="none"
+                    fontColor="#fff"
+                    fontSize="24px"
+                    fontWeight="bold"
+                    text="Ray Donovan"
+                    textIsRich="true"/>
+                <buttonImage
+                    jcr:lastModified="{Date}2018-12-05T16:12:46.145-06:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="verizon-fios-crm/components/content/global/globalButton"
+                    cssClass="[white,_blank]"
+                    label="Learn more >"
+                    link="#"/>
+                <heroLogo
+                    jcr:description="Show Time"
+                    jcr:lastModified="{Date}2018-12-07T01:04:26.665-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    fileReference="/content/dam/verizon-fios-crm/showtime-logo.png"
+                    imageRotate="0"/>
+                <globalCTA
+                    jcr:primaryType="nt:unstructured"
+                    cssClass="[white,]"
+                    label="Learn More"
+                    link="/content/campaigns/verizon-fios-crm/master/e-mails/demo"/>
+                <heroDescription
+                    jcr:primaryType="nt:unstructured"
+                    background="none"
+                    fontColor="#fff"
+                    fontSize="24px"
+                    fontWeight="bold"
+                    text="Ray Donovan"
+                    textIsRich="true"/>
+            </heroimage>
+            <textspotlight
+                jcr:created="{Date}2018-12-05T13:51:36.820-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-12-05T13:55:11.797-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="verizon-fios-crm/components/content/textSpotlight"
+                altLogoImage="Showtime Logo"
+                componentType="image"
+                textArea="Sign up now to keep watching award-winning originals, hit movies, sports and more.">
+                <image
+                    jcr:lastModified="{Date}2018-12-05T13:55:11.797-06:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    fileLogoReference="/content/dam/verizon-fios-crm/showtime-anytime-logo.png"
+                    imageRotate="0"/>
+            </textspotlight>
+            <textspotlight_586966236
+                jcr:created="{Date}2018-12-05T13:52:34.925-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-12-05T16:13:23.562-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="verizon-fios-crm/components/content/textSpotlight"
+                componentType="link"
+                label="Learn more >"
+                link="#"
+                textArea="We hope you’ve been enjoying your three \u0003months of complimentary SHOWTIME®. Now \u0003it’s time to subscribe, so you can continue \u0003enjoying critically acclaimed original series like Ray Donovan, sports programming like Inside \u0003the NFL™, hit movies and more.&#xa;&#xa;Watch when you want, with Fios® On Demand \u0003and SHOWTIME ON DEMAND®. And take SHOWTIME to go with the Fios TV app.*&#xa;&#xa;Subscribe to SHOWTIME on channel 365 SD \u0003or 865 HD.">
+                <image
+                    jcr:lastModified="{Date}2018-12-05T16:13:23.562-06:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    fileLogoReference="/content/dam/verizon-fios-crm/showtime-anytime-logo.png"
+                    imageRotate="0"/>
+            </textspotlight_586966236>
+            <promospotlight
+                jcr:created="{Date}2018-12-05T16:13:37.294-06:00"
+                jcr:createdBy="admin"
+                jcr:description="Escape at Dannemora"
+                jcr:lastModified="{Date}2018-12-07T01:07:35.507-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="verizon-fios-crm/components/content/promoSpotlight"
+                altLogoImage="Showtime logo"
+                fileReference="/content/dam/verizon-fios-crm/left-image.png"
+                imageRotate="0">
+                <image
+                    jcr:lastModified="{Date}2018-12-05T16:14:14.083-06:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    fileLogoReference="/content/dam/verizon-fios-crm/showtime-logo.png"
+                    fileReference="/content/dam/verizon-fios-crm/left-image.png"
+                    imageCrop="[,]"
+                    imageMap="[,]"
+                    imageRotate="[0,0]"/>
+                <buttonImage
+                    jcr:lastModified="{Date}2018-12-05T16:14:35.831-06:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="verizon-fios-crm/components/content/global/globalButton"
+                    cssClass="[black,_blank]"
+                    label="Escape at Dannemora"
+                    link="#"/>
+                <promoLogo
+                    jcr:description="Show Time"
+                    jcr:lastModified="{Date}2018-12-07T01:07:35.507-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    fileReference="/content/dam/verizon-fios-crm/showtime-logo.png"
+                    imageRotate="0"/>
+            </promospotlight>
+            <promospotlight_2012332214
+                jcr:created="{Date}2018-12-05T16:14:46.195-06:00"
+                jcr:createdBy="admin"
+                jcr:description="Inside the NFL &lt;sup>TM&lt;sup>"
+                jcr:lastModified="{Date}2018-12-07T01:09:01.854-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="verizon-fios-crm/components/content/promoSpotlight"
+                altLogoImage="Showtime Logo"
+                fileReference="/content/dam/verizon-fios-crm/right-image.png"
+                imageRotate="0">
+                <image
+                    jcr:lastModified="{Date}2018-12-05T16:15:15.738-06:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    fileLogoReference="/content/dam/verizon-fios-crm/showtime-logo.png"
+                    fileReference="/content/dam/verizon-fios-crm/right-image.png"
+                    imageCrop="[,]"
+                    imageMap="[,]"
+                    imageRotate="[0,0]"/>
+                <buttonImage
+                    jcr:lastModified="{Date}2018-12-05T16:15:30.133-06:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="verizon-fios-crm/components/content/global/globalButton"
+                    cssClass="[black,_blank]"
+                    label="Inside the NFL TM"
+                    link="#"/>
+                <promoLogo
+                    jcr:description="Show Time"
+                    jcr:lastModified="{Date}2018-12-07T01:09:01.854-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    fileReference="/content/dam/verizon-fios-crm/showtime-logo.png"
+                    imageRotate="0"/>
+            </promospotlight_2012332214>
+        </par>
+    </jcr:content>
+</jcr:root>

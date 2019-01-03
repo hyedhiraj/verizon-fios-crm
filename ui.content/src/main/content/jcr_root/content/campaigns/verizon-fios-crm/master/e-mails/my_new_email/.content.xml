@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:acApproved="{Boolean}true"
+        cq:acLinks="[DM2637]"
+        cq:acUUID="d302d438-8a8d-4f96-ae52-5857316d0240"
+        cq:cloudserviceconfigs="/etc/cloudservices/campaign/adobe-campaign"
+        cq:designPath="/etc/designs/default"
+        cq:lastModified="{Date}2018-11-19T04:02:39.269Z"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2018-11-19T04:03:18.688Z"
+        cq:lastReplicatedBy="workflow-process-service"
+        cq:lastReplicationAction="Activate"
+        cq:targetEngine="cq_campaign"
+        cq:template="/libs/mcm/campaign/templates/ac-email-61"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2018-11-16T18:47:48.553Z"
+        jcr:lastModifiedBy="sandroteena"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="My New Email"
+        jcr:uuid="7b74201b-298a-4fa9-9267-aee7e9c18822"
+        sling:resourceType="mcm/campaign/components/campaign_newsletterpage"
+        acDelivery="DM2624"
+        acMapping="mapRecipient"
+        acOffer="E-Mail Campaigns"
+        acPublishState="published"
+        acTemplateId="DM1715"
+        acTemplateLabel="Email delivery"
+        plaintext="Short teaser is displayed with "
+        subject="50% OFF"
+        teaserPageType="newsletter">
+        <teaser
+            jcr:lastModified="{Date}2013-12-11T18:10:43.886+01:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="mcm/campaign/components/personalization"
+            text="&lt;p>Short teaser (is displayed as a preview in some email clients)&lt;/p>"
+            textIsRich="true"/>
+        <redirect
+            jcr:lastModified="{Date}2013-12-11T18:10:43.886+01:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="mcm/campaign/components/personalization"
+            text="&lt;p style=&quot;text-align: right;&quot;>&amp;lt;%@ include view=&amp;quot;MirrorPage&amp;quot; %&amp;gt;&lt;/p>"
+            textIsRich="true"/>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="mcm/campaign/components/parsys">
+            <personalization
+                jcr:created="{Date}2018-11-16T18:46:20.622Z"
+                jcr:createdBy="sandroteena"
+                jcr:lastModified="{Date}2018-11-19T03:51:48.083Z"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="mcm/campaign/components/personalization"
+                text="&lt;p>&amp;lt;%= recipient.firstName %&amp;gt;, &amp;lt;%= recipient.lastName %&amp;gt;&lt;/p>&#xa;"
+                textIsRich="true"/>
+        </par>
+        <parLeft
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="mcm/campaign/components/parsys">
+            <title
+                jcr:created="{Date}2013-12-03T16:57:12.885+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-07-25T15:41:51.150+03:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Left Column"
+                sling:resourceType="mcm/campaign/components/heading"
+                type="h4"/>
+        </parLeft>
+        <parRight
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="mcm/campaign/components/parsys">
+            <title
+                jcr:created="{Date}2013-12-03T16:57:12.885+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-07-25T15:41:51.150+03:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Right Column"
+                sling:resourceType="mcm/campaign/components/heading"
+                type="h4"/>
+        </parRight>
+        <footer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="mcm/campaign/components/parsys">
+            <copyright
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="mcm/campaign/components/personalization"
+                text="&lt;p style=&quot;text-align: center;&quot;>Copyright &amp;copy; 2014 Adobe. All rights reserved.&lt;/p>"
+                textIsRich="true"/>
+            <unsubscribe
+                jcr:lastModified="{Date}2013-12-11T18:12:45.047+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="mcm/campaign/components/personalization"
+                text="&lt;p style=&quot;text-align: center;&quot;>&amp;lt;%@ include view=&amp;quot;UnsubscriptionLink&amp;quot; %&amp;gt;&lt;/p>"
+                textIsRich="true"/>
+        </footer>
+    </jcr:content>
+</jcr:root>

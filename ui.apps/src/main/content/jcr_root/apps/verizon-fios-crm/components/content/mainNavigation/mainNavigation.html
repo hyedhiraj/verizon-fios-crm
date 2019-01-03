@@ -1,0 +1,71 @@
+<sly
+	data-sly-use.model="${'com.verizon.fios.core.models.content.main_nav.MainNavComponentModel'}" />
+
+<div data-sly-test="${wcmmode.edit}"
+	data-emptytext="Main Navigation Component"
+	class="cq-placeholder cq-marker-start"></div>
+
+<table  border="0" cellpadding="0" cellspacing="0"
+	style="
+		border-collapse: collapse; 
+		width: 100%; 
+		margin: 0; 
+		padding: 0;">
+	<tr>
+		<td colspan="3" align="left" valign="middle"
+			style="
+				border-collapse: collapse; 
+				mso-table-lspace: 0; 
+				mso-table-rspace: 0; 
+				background-color: var(--brand-header-navigation-bg-color); 
+				height: 132px; 
+				vertical-align: middle; 
+				width: 50%; 
+				padding-left: var(--global-padding-left);">
+					<img src="${model.fileReference}" width="163" height="65"
+						alt="${model.fileReference}" title="" border="0"
+						style="
+							display: block; 
+							border-width: 0; 
+							-ms-interpolation-mode: bicubic; 
+							font-size: 18px; 
+							line-height: 22px; 
+							color: var(--img-alt-text-color);" />
+		</td>
+		<td colspan="3" align="left" valign="middle"
+			style="
+				border-collapse: collapse; 
+				mso-table-lspace: 0; 
+				mso-table-rspace: 0; 
+				background-color: var(--brand-header-navigation-bg-color); 
+				height: 132px; 
+				vertical-align: middle; 
+				width: 50%;">
+			<ul style="
+				list-style: none; 
+				margin: 0; 
+				padding: 0;">
+				<li data-sly-repeat.resourceLink="${model.linkListItems}"
+					style="
+						background-color: var(--brand-header-navigation-bg-color); 
+						height: 132px; 
+						width: 33.33334%; 
+						text-align: right; 
+						border-collapse: collapse; 
+						mso-table-lspace: 0; 
+						mso-table-rspace: 0; 
+						display: inline; 
+						float: right; 
+						padding-right: var(--global-padding-right); 
+						padding-top: var(--global-padding-top);">
+						<a
+							href="${resourceLink.href @ extension='html'}?${resourceLink.query}"
+							x-cq-linkchecker="valid"
+							style="font-size: 32px; font-weight: normal; line-height: 36px; mso-line-height-rule: exactly; color: var(--brand-header-navigation-text-color); text-decoration: none;"
+							data-sly-attribute.target="${resourceLink.target}">
+								${resourceLink.label @ i18n} </a>
+				</li>
+			</ul>
+		</td>
+	</tr>
+</table>

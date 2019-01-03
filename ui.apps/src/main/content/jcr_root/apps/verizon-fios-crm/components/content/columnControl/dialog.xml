@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Dialog"
-    title="Social Media Component"
-    xtype="dialog"/>
+    height="400"
+    stateful="false"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs jcr:primaryType="cq:TabPanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <componentType
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Number of columns"
+                    name="./columns"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <o1
+                            jcr:primaryType="nt:unstructured"
+                            text="One Column"
+                            value="1"/>
+                        <o2
+                            jcr:primaryType="nt:unstructured"
+                            text="Two Columns"
+                            value="2"/>
+                    </options>
+                </componentType>
+            </items>
+        </tabs>
+    </items>
+</jcr:root>

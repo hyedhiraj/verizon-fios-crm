@@ -1,0 +1,19 @@
+<template data-sly-template.linkImage="${@ asset, link}">
+    <a data-sly-attribute.href="${link @ extension='html'}" data-sly-test="${asset}">
+        <img data-sly-attribute.src="${asset}"/>
+    </a>
+</template>
+
+<template data-sly-template.globalImage="${@ asset, imageClass}">
+    <figure class="${imageClass}-figure" data-sly-test="${asset}">
+        <img class="${imageClass}" data-sly-attribute.src="${asset}"/>
+    </figure>
+</template>
+
+<template data-sly-template.globalSvgAsset="${@ asset, link, cssClass}">
+    <a data-sly-attribute.href="${link.link @ extension='html'}" data-sly-test="${asset.svgAsset}">
+        <i data-sly-attribute.class="${cssClass}">
+            ${asset.svgAsset @ context='unsafe'}
+        </i>
+    </a>
+</template>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="78071b9c-e476-4225-b5b7-e9168e39f97e">
+    <jcr:content
+        dam:relativePath="verizon-fios-crm/heroImage-ray-donovan.png"
+        jcr:lastModified="{Date}2018-12-14T11:58:18.278-06:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}32"
+            dam:Comments="Raw profile type iptc: &#xa;iptc&#xa;      56&#xa;3842494d040400000000002c1c015a00031b25471c0237000832303138313231331c0200&#xa;000200001c023c000b3231343431362d32313434&#xa;&#xa;"
+            dam:extracted="{Date}2018-12-14T11:58:14.654-06:00"
+            dam:Fileformat="PNG"
+            dam:MIMEtype="image/png"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}1"
+            dam:Physicalheightindpi="{Long}144"
+            dam:Physicalheightininches="{Decimal}9.646328926086426"
+            dam:Physicalwidthindpi="{Long}144"
+            dam:Physicalwidthininches="{Decimal}10.000514030456543"
+            dam:Progressive="no"
+            dam:sha1="e970bee69aa35641f98213c27dd27fdb4db8e900"
+            dam:size="{Long}3416906"
+            dc:format="image/png"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}1389"
+            tiff:ImageWidth="{Long}1440"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

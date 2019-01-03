@@ -1,0 +1,31 @@
+<sly
+	data-sly-use.model="${'com.verizon.fios.core.models.content.LinkModel'}" />
+
+<div data-sly-test="${wcmmode.edit}" style="min-height: 50px;"
+	data-emptytext="Global Button Component"
+	class="cq-placeholder cq-marker-start"></div>
+
+<a data-sly-test="${model.cssClass=='white'}"
+	href="${model.link @ extension= 'html'}" target="${model.target}"
+	style="
+		color: var(--brand-hero-image-bg-color); 
+		background-color: var(--brand-hero-image-text-color); 
+		width: 303px; 
+		height: 80px; 
+		padding: 28px 70px; 
+		font-size: 32px; 
+		line-height: 0.875; 
+		text-align: center; 
+		text-decoration: none; 
+		border-radius: 50px;">
+	<sly data-sly-test="${model.label}"> ${model.label @ i18n} </sly> 
+	<sly data-sly-test="${!model.label}"> Learn more ${model.textArea} </sly>
+</a>
+<a href="${model.href @ extension= 'html'}" target="${model.target}"
+	style="
+		color: var(--brand-right-side-text-color); 
+		text-decoration: none;">
+	<sly data-sly-test="${model.label}"> ${model.label @ i18n} </sly> 
+	<sly data-sly-test="${!model.label}"> Learn more > </sly>
+</a>
+

@@ -4,4 +4,4 @@
     jcr:primaryType="cq:Component"
     jcr:title="Global Main Navigation Component"
     allowedParents="[*/parsys]"
-    componentGroup="fios-crm"/>
+    componentGroup=".hidden"/>

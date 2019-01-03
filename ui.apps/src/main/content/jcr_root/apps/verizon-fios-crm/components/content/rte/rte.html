@@ -1,12 +1,8 @@
-<p data-sly-use.personalization="rte.js" data-sly-unwrap="${rte.context == rte.CONST.CONTEXT_HTML}" class="${rte.cssClass}" data-emptytext="RTE Component">
-    <div data-sly-unwrap="${wcmmode.disabled || !rte.isTouch}" class="ac-personalize">
-        ${personalization.text @ context=personalization.context}
-    </div>
-</p>
+<div data-sly-test="${wcmmode.edit}" data-emptytext="RTE Component" 
+	class="cq-placeholder cq-marker-start">
+</div>
+<div data-sly-test="${properties.rte}">
+    ${personalization.text @ context=personalization.context} 
 
-<div data-sly-test="${!wcmmode.disabled && !rte.isTouch}" data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap>
-	<meta data-sly-call="${clientLib.all @ categories='cq.personalization'}" data-sly-unwrap></meta>
-	<script type="text/javascript">
-		CQ.personalization.variables.Variables.applyToEditComponent("${resource.path @ context='scriptString'}");
-	</script>
+	${properties.rte @ context='html'}
 </div>

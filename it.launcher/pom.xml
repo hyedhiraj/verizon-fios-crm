@@ -27,6 +27,7 @@
     <!-- ====================================================================== -->
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
+    <version>1.0-SNAPSHOT</version>
     <artifactId>verizon-fios-crm.it.launcher</artifactId>
     <packaging>jar</packaging>
     <name>verizon-fios-crm - Integration Tests Launcher</name>

@@ -1,54 +1,91 @@
-<div data-sly-test="${wcmmode.edit && !properties.fileReference}">
-	DOUBLE CLICK TO CONFIGURE HREO IMAGE COMPONENT...
+<sly data-sly-use.model="${'com.verizon.fios.core.models.content.heroImage.HeroImageModel'}"
+     data-sly-use.modelImage="${'com.verizon.fios.core.models.content.image.ImageModel'}"/>
+
+<div data-sly-test="${wcmmode.edit}"
+    data-emptytext="Hero Image Component"
+    class="cq-placeholder cq-marker-start" 
+    style="min-height:50px;">
+    Hero Image Component
 </div>
-
-<div class="container">
-	<sly data-sly-test="${properties.fileReference}">
-		<sly data-sly-test="${properties.linkURL}">
-			<a href="${properties.linkURL}">
-        </sly>
-				<img src="${properties.fileReference}" alt="{properties.alt}" class="responsive">
-		<sly data-sly-test="${properties.linkURL}">
-			</a>
-        </sly>
-    </sly>
-
-    <sly data-sly-test="${properties.title}">
-        <div class="top-left">
-        	${properties.title @ context='html'}
-            <sly data-sly-test="${properties.label}">
-            	<sly data-sly-test="${properties.link}">
-                    <a href="${properties.link}">
-                </sly>
-					<button class="button" type="button">${properties.label}</button>
-				<sly data-sly-test="${properties.link}">
-                    </a>
-                </sly>
-            </sly>
-		</div>
-    </sly>
-</div>
-
-<style>
-    .container {
-    	position: relative;
-    }
-	.top-left {
-        position: absolute;
-        top: 0px;
-        left: 16px;
-    }
-    .responsive {
-        max-width: 100%;
-        height: auto;
-    }
-    .button {
-        background-color: Transparent;
-        background-repeat:no-repeat;
-        cursor:pointer;
-        overflow: hidden;
-        outline:none;
-        border-radius: 12px;
-    }
-</style>
-
+<table border="0" cellpadding="0" cellspacing="0" align="left"  
+        style="
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            width:100%;
+            clear: both;">
+    <tr>
+        <td align="left" colspan="6" valign="middle"
+            style="
+                border-collapse: collapse; 
+                mso-table-lspace: 0; 
+                mso-table-rspace: 0; 
+                vertical-align: middle; 
+                mso-line-height-rule: exactly;">
+            <table border="0" cellpadding="0" cellspacing="0" align="left"
+                   style="
+               			width: 100%;
+                        height: 1390px; 
+                        border-spacing: 0; 
+                        border-collapse: collapse; 
+                        mso-table-lspace: 0;
+                        mso-table-rspace: 0; 
+                        background-image: url('${modelImage.pathDomain @ context='uri'}${modelImage.fileReference @ context='uri'}');
+                        background-repeat: no-repeat; 
+                        background-size: cover;">
+                <tr data-sly-test="${modelImage.description}">
+                    <td align="left" valign="top" colspan="2"
+                        style="
+                            width: 50%;
+                            height: 50%;
+                            border-collapse: collapse;
+                            mso-table-lspace: 0;
+                            mso-table-rspace: 0;
+                            color: var(--brand-hero-image-text-color);
+                            font-size: 93px;
+                            line-height: 1.15;
+                            padding: var(--global-padding-top) var(--global-padding-left);
+                            font-weight: bold;">
+                        ${modelImage.description}
+                    </td>
+                    <td align="left" valign="top" colspan="2"
+                        style="
+                            width: 50%;
+                            height: 50%;
+                            border-collapse: collapse;
+                            mso-table-lspace: 0;
+                            mso-table-rspace: 0;">
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="bottom" align="left" colspan="2"
+                        style="
+                            width: 50%; 
+                            height: 50%; 
+                            border-collapse: collapse; 
+                            mso-table-lspace: 0; 
+                            mso-table-rspace: 0; 
+                            padding: 0 var(--global-padding-right) 85px;">
+                        <a data-sly-test="${model.link.label}"
+                            href="${model.link.href @ extension= 'html'}" target="${model.link.target}"
+                            style="
+                                color: var(--brand-hero-image-bg-color);
+                                background-color: var(--brand-hero-image-text-color);
+                                width: 303px;
+                                height: 80px;
+                                padding: 28px 70px;
+                                font-size: 32px;
+                                line-height: 0.875;
+                                text-align: center;
+                                text-decoration: none;
+                                border-radius: 50px;">
+                            ${model.link.label @ i18n}
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<div data-sly-test="${wcmmode.edit}"style="clear: both;"></div>

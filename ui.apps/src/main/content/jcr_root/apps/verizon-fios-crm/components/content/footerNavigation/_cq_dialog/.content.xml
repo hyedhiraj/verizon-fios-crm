@@ -26,15 +26,17 @@
                         <items jcr:primaryType="nt:unstructured">
                             <links
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/foundation/form/multifield"
-                                class="full-width"
-                                fieldDescription="Click '+' to add a new page"
-                                fieldLabel="Links">
+                                sling:resourceType="/apps/verizon-fios-crm/components/granite/ui/components/form/structuredMultifield"
+                                composite="{Boolean}true"
+                                eaem-nested=""
+                                fieldDescription="Click 'Add field' to add a new Link"
+                                fieldLabel="Links"
+                                id="custom-wide-multifield"
+                                name="./links">
                                 <field
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="granite/ui/components/foundation/form/fieldset"
-                                    acs-commons-nested=""
-                                    name="./links">
+                                    name="/linkItem">
                                     <layout
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
@@ -49,13 +51,13 @@
                                                     sling:resourceType="granite/ui/components/foundation/form/textfield"
                                                     fieldDescription="Enter Page Name"
                                                     fieldLabel="Name"
-                                                    name="./name"/>
+                                                    name="./label"/>
                                                 <path
                                                     jcr:primaryType="nt:unstructured"
                                                     sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                                                     fieldDescription="Select path to the page"
                                                     fieldLabel="Page path"
-                                                    name="./path"
+                                                    name="./href"
                                                     rootPath="/content"/>
                                             </items>
                                         </column>
@@ -66,6 +68,7 @@
                     </column>
                 </items>
             </tab1>
+            
         </items>
     </content>
 </jcr:root>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:primaryType="cq:Page">
+    <polar-goggles-reminder/>
+    <polar-googles-offer/>
+    <jcr:content
+        cq:allowedTemplates="[/apps/verizon-fios-crm/templates/acEmailCustom,/apps/geometrixx-outdoors/templates/geometrixx_newsletter,/libs/mcm/campaign/templates/ac-email-61,/libs/mcm/campaign/templates/ac-email-acs]"
+        cq:cloudserviceconfigs="[/etc/cloudservices/campaign/adobe-campaign]"
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub/persona"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2018-11-18T21:26:31.460Z"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/personalization/templates/campaign"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="E-Mail Campaigns"
+        jcr:uuid="abbc348c-cee2-4d32-9400-1c9d117fb820"
+        sling:resourceType="cq/personalization/components/campaignpage"/>
+    <test-email-template/>
+    <my_new_email/>
+    <adobe-campaign-6-1/>
+    <email-test-campaign-11-21/>
+    <teena-test/>
+    <test-verizon/>
+    <demo/>
+</jcr:root>

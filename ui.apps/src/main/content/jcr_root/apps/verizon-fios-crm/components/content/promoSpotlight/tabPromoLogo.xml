@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Promo Logo">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <description
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Description Promo Logo"
+            name="./promoLogo/jcr:description"
+            xtype="textarea"/>
+        <image
+            jcr:primaryType="cq:Widget"
+            border="true"
+            cropParameter="./promoLogo/imageCrop"
+            ddGroups="[media]"
+            fileNameParameter="./promoLogo/fileName"
+            fileReferenceParameter="./promoLogo/fileReference"
+            height="400"
+            hideLabel="false"
+            mapParameter="./promoLogo/imageMap"
+            name="./promoLogo/file"
+            requestSuffix="/image.img.png"
+            rotateParameter="./promoLogo/imageRotate"
+            sizeLimit="100"
+            xtype="html5smartimage"/>
+    </items>
+</jcr:root>

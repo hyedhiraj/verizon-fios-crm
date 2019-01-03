@@ -11,9 +11,9 @@
             sling:resourceType="granite/ui/components/foundation/layouts/tabs"
             type="nav"/>
         <items jcr:primaryType="nt:unstructured">
-            <tab1
+            <tabColumns
                 jcr:primaryType="nt:unstructured"
-                jcr:title="Columns"
+                jcr:title="Number of Columns"
                 sling:resourceType="granite/ui/components/foundation/section">
                 <layout
                     jcr:primaryType="nt:unstructured"
@@ -32,26 +32,18 @@
                                 <items jcr:primaryType="nt:unstructured">
                                     <one
                                         jcr:primaryType="nt:unstructured"
-                                        text="1 Column"
-                                        value="12"/>
+                                        text="One Column"
+                                        value="1"/>
                                     <two
                                         jcr:primaryType="nt:unstructured"
-                                        text="2 Column"
-                                        value="6-6"/>
-                                    <three
-                                        jcr:primaryType="nt:unstructured"
-                                        text="3 Column"
-                                        value="4-4-4"/>
-                                    <four
-                                        jcr:primaryType="nt:unstructured"
-                                        text="4 Column"
-                                        value="3-3-3-3"/>
+                                        text="Two Columns"
+                                        value="2"/>
                                 </items>
                             </columns>
                         </items>
                     </column>
                 </items>
-            </tab1>
+            </tabColumns>
         </items>
     </content>
 </jcr:root>

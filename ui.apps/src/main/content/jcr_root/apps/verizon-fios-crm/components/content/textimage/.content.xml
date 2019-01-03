@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    cq:icon="imageText"
+    jcr:description="Text &amp; Image-Responsive"
     jcr:primaryType="cq:Component"
-    jcr:title="Text &amp; Image - Responsive"
-    sling:resourceSuperType="foundation/components/parbase"
-    componentGroup="fios-crm"/>
+    jcr:title="Text &amp; Image-Responsive"
+    sling:resourceSuperType="verizon-fios-crm/components/content/baseComponent"
+    componentGroup="verizon-fios-crm"/>

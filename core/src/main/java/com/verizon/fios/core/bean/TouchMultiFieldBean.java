@@ -1,10 +1,11 @@
 package com.verizon.fios.core.bean;
 
 /**
- * POJO for Multi Field items
+ * POJO for Multi Field items to use in sightly
  *
  */
 public class TouchMultiFieldBean {
+
 
 	private String name;
 	private String path;
@@ -24,4 +25,5 @@ public class TouchMultiFieldBean {
 	public void setPath(String path) {
 		this.path = path;
 	}
+
 }

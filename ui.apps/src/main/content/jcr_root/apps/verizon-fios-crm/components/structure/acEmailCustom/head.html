@@ -1,0 +1,283 @@
+<!--/*
+
+  ADOBE CONFIDENTIAL
+  __________________
+
+   Copyright 2014 Adobe Systems Incorporated
+   All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+
+  Renders the head markup of a sightly page
+*/-->
+<head data-sly-use.head="head.js"
+      data-sly-use.wcmInit="initwcm.js"
+      data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"
+      data-sly-use.body="body.js">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>${head.title}</title>
+    <link rel="canonical" href="${head.pagePath}" />
+    <link data-sly-test="${head.faviconPath}" rel="shortcut icon" href="${head.faviconPath}" />
+    <meta data-sly-test="${head.description}" name="description" content="${head.description}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta data-sly-test="${head.keywords}" name="keywords" content="${head.keywords}"/>
+
+    <!--/* Outputs the WCM initialization code. If WCM mode is disabled nothing is rendered */-->
+
+    <!--/* include client libs */-->
+    <meta data-sly-test="${!head.wcmmode.disabled && wcmInit.isTouchAuthoring}" data-sly-call="${clientLib.all @ categories='jquery,cq.authoring.page,cq.shared'}" data-sly-unwrap></meta>
+    <meta data-sly-test="${!head.wcmmode.disabled && !wcmInit.isTouchAuthoring}" data-sly-call="${clientLib.all @ categories='cq.wcm.edit,mcm.campaign.ui.classic,cq.mcm,cq.mcm.newsletter.emulator,cq.personalization,cq.mcm.newsletter.hook,cq.dam.scene7,mcm.campaign.s7-image'}" data-sly-unwrap></meta>
+    <meta data-sly-test="${!head.wcmmode.disabled && !wcmInit.isTouchAuthoring}" data-sly-resource="${resource.path @ resourceType='mcm/components/newsletter/emailclient/base', selectors='init'}" data-sly-unwrap></meta>
+
+    <!--/* initialize ContextHub registration */-->
+    <meta id="campaignContextHub" data-register="true" data-metadata-method="POST" data-sly-test="${!head.wcmmode.disabled && wcmInit.isTouchAuthoring}" />
+
+    <!--/* initialize client context and load segments */-->
+    <script data-sly-test="${!head.wcmmode.disabled && !wcmInit.isTouchAuthoring}" type="text/javascript">
+        $(function() {
+            var ccPath = "${head.clientcontextPath @ context='scriptString'}";
+            var segmentsPath = "${head.segmentsPath @ context='scriptString'}";
+            var currentPath = "${currentPage.path @ context='scriptString'}";
+
+            CQ_Analytics.ClientContextUtils.init(ccPath, currentPath, {});
+            CQ_Analytics.SegmentMgr.loadSegments(segmentsPath);
+        });
+    </script>
+
+    <!--/* initialize client context UI and Sidekick (Classic UI only) */-->
+    <script data-sly-test="${!head.wcmmode.disabled && !wcmInit.isTouchAuthoring}" type="text/javascript">
+        (function() {
+            var cfg = ${wcmInit.undoConfig @ context='unsafe'};
+            cfg.pagePath = "${currentPage.path @ context='uri'}";
+
+            if (CQClientLibraryManager.channelCB() != "touch") {
+                cfg.enabled = ${head.wcmmode.edit @ context="scriptString"};
+                CQ.undo.UndoManager.initialize(cfg);
+                CQ.Ext.onReady(function() {
+                    CQ.undo.UndoManager.detectCachedPage((new Date()).getTime());
+                });
+            }
+        })();
+
+        $(function() {
+            var ccPath = "${head.clientcontextPath @ context='scriptString'}";
+            var segmentsPath = "${head.segmentsPath @ context='scriptString'}";
+            var currentPath = "${currentPage.path @ context='scriptString'}";
+
+            CQ_Analytics.ClientContextUtils.initUI(ccPath, currentPath, false);
+            CQ_Analytics.CampaignMgr.autoSelectCampaign("${properties.acOffer @ context='scriptString'}");
+        });
+
+        CQ.WCM.launchSidekick("${currentPage.path @ context='uri'}", {
+            propsDialog: "${wcmInit.dialogPath @ context='uri'}",
+            locked: ${currentPage.locked @ context="scriptString"}
+        });
+    </script>
+
+    <!--/* WCM initialization code end */-->
+
+    <style type="text/css">
+
+        /* styles to account for Outlook/Hotmail peculiarities */
+
+        .ExternalClass {
+            width:100%;
+        }
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
+
+        table {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /* triggers "view in browser" link in Outlook */
+
+        #outlook a {
+            padding: 0;
+        }
+
+        /* template styles */
+
+        .ac-content-cell img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .ac-content-cell p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* styles for responsive layout */
+
+        @media only screen and (max-width: 480px) {
+
+            #ac-body-cell {
+                padding: 10px !important;
+            }
+
+            #ac-content-table {
+                max-width: 600px !important;
+                width: 100% !important;
+            }
+
+            .ac-content-cell img {
+                width: 100% !important;
+            }
+
+            .ac-column-cell {
+                display: block !important;
+                width: auto !important;
+            }
+
+        }
+
+    </style>
+
+    <style type="text/css" data-sly-test="${!head.wcmmode.disabled}">
+
+        .ac-content-cell img.cq-placeholder {
+            height: 2.875rem;
+        }
+
+    </style>
+    
+    <style type="text/css">
+
+/*
+	In order to update styles, copy here the code after *gulp build* generated on fe.base/build/assets/css/styles.css
+*/
+	:root {
+  --brand-background: #fff;
+  --brand-subject-line-bg-color: #d9dbdb;
+  --brand-subject-line-text-color: #303030;
+  --brand-header-announcement-bg-color: #fff;
+  --brand-header-announcement-text-color: #747676;
+  --brand-header-navigation-bg-color: #000;
+  --brand-header-navigation-text-color: #fff;
+  --brand-footer-navigation-bg-color: #fff;
+  --brand-footer-navigation-text-color: #000;
+  --brand-advertisement-navigation-bg-color: #fff;
+  --brand-advertisement-navigation-text-color: #000;
+  --brand-right-side-bg-color: #000;
+  --brand-right-side-text-color: #fff;
+  --brand-left-side-bg-color: #000;
+  --brand-left-side-text-color: #fff;
+  --brand-hero-image-text-color: #fff;
+  --brand-left-image-text-color: #fff;
+  --brand-right-image-text-color: #fff;
+  --global-padding-left: 48px;
+  --global-padding-right: 48px;
+  --global-padding-top: 50px;
+  --global-padding-bottom: 50px;
+  --img-alt-text-color: #1919ff;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: --var(--brand-background);
+  font-family: Arial, sans-serif;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  mso-line-height-rule: exactly;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: none !important;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  mso-table-lspace: 0;
+  mso-table-rspace: 0;
+}
+
+table td {
+  border-collapse: collapse;
+  mso-table-lspace: 0;
+  mso-table-rspace: 0;
+}
+
+table td a {
+  font-size: 25px;
+  line-height: 33px;
+  mso-line-height-rule: exactly;
+  color: var(--brand-footer-navigation-text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+table td p a {
+  font-size: 16px;
+  line-height: 1.214;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  margin-top: 0;
+  margin-bottom: 30px;
+  line-height: 1.214;
+  text-align: left;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.text-spolight p{
+	font-size: 25px;
+    margin-bottom: 40px;
+}
+
+</style>
+    <meta data-sly-test="${!head.wcmmode.disabled && wcmInit.isTouchAuthoring}" data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}" data-sly-unwrap></meta>
+
+</head>

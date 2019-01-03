@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    fliedLabel="Text Spotlight"
+    helpPath="en/cq/current/wcm/default_components.html#Text"
+    title="Text Spotlight"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tab1
+            jcr:primaryType="cq:Widget"
+            anchor="100%"
+            title="Logo Image"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <text
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Text"
+                    name="./textArea"
+                    xtype="textarea"/>
+                <componentType
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Component Type"
+                    name="./componentType"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <o1
+                            jcr:primaryType="nt:unstructured"
+                            text="Image"
+                            value="image"/>
+                        <o2
+                            jcr:primaryType="nt:unstructured"
+                            text="Link"
+                            value="link"/>
+                    </options>
+                </componentType>
+                <altLogoImage
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Alt Logo Image"
+                    name="./altLogoImage"
+                    xtype="textfield"/>
+                <linkText
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Link Text"
+                    name="./label"
+                    xtype="textfield"/>
+                <pathField
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Path to"
+                    name="./link"
+                    xtype="browsefield"/>
+            </items>
+        </tab1>
+        <logoImage
+            jcr:primaryType="cq:Panel"
+            title="Logo Image">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <image
+                    jcr:primaryType="cq:Widget"
+                    border="true"
+                    cropParameter="./image/imageCrop"
+                    ddGroups="[media]"
+                    fileNameParameter="./image/fileLogoName"
+                    fileReferenceParameter="./image/fileLogoReference"
+                    height="400"
+                    hideLabel="false"
+                    mapParameter="./image/imageMap"
+                    name="./image/file"
+                    requestSuffix="/image.img.png"
+                    rotateParameter="./image/imageRotate"
+                    sizeLimit="100"
+                    xtype="html5smartimage"/>
+            </items>
+        </logoImage>
+    </items>
+</jcr:root>

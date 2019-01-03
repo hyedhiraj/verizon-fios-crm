@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[cq.mcm.campaign.touch]"
+    mode="edit">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <items
+            jcr:primaryType="nt:unstructured"
+            sling:hideChildren="tabs">
+            <tabs_new
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                    type="nav"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                            margin="{Boolean}false"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <main
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title=""
+                                        sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Will be used as subject of the newsletter as well, if not overwritten there."
+                                                fieldLabel="Title"
+                                                name="./jcr:title"
+                                                renderReadOnly="{Boolean}true"
+                                                required="{Boolean}true"/>
+                                        </items>
+                                    </main>
+                                    <description
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Description"
+                                        sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                        title="Description">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <description
+                                                cq:showOnCreate="{Boolean}true"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                                fieldLabel="Description"
+                                                name="./jcr:description"
+                                                renderReadOnly="{Boolean}true"/>
+                                        </items>
+                                    </description>
+                                    <charset
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                        name="_charset_"
+                                        value="utf-8"/>
+                                </items>
+                            </column>
+                        </items>
+                    </basic>
+                    <email
+                        cq:showOnCreate="{Boolean}false"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Email"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <subject
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/inputgroup"
+                                        fieldLabel="Subject"
+                                        renderReadOnly="{Boolean}true">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                            name="./subject"/>
+                                        <rightButton
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/button"
+                                            class="coral-Button--square"
+                                            icon="coral-Icon--adobeCampaign"
+                                            init="acmetadatapicker"
+                                            targetinput="input[name='./subject']"/>
+                                    </subject>
+                                    <plaintext
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                        fieldLabel="Plain text"
+                                        name="./plaintext"
+                                        renderReadOnly="{Boolean}true"
+                                        resize="both"/>
+                                    <plaintextButtons
+                                        cq:showOnCreate="{Boolean}false"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/container"
+                                        class="ac-pageproperties-plaintext-buttons foundation-field-hide-in-default">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/layouts/container"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <plaintextMetadatPicker
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/button"
+                                                class="coral-Button--square"
+                                                icon="coral-Icon--adobeCampaign"
+                                                init="acmetadatapicker"
+                                                targetinput="textarea[name='./plaintext']"/>
+                                            <plaintextGenerator
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/button"
+                                                class="coral-Button--square"
+                                                href="${empty param.item ? requestPathInfo.suffix : param.item}${&quot;.html?wcmmode=disabled&quot;}"
+                                                icon="coral-Icon--fileCode"
+                                                init="acplaintextgenerator"
+                                                targetinput="textarea[name='./plaintext']"/>
+                                        </items>
+                                    </plaintextButtons>
+                                </items>
+                            </columns>
+                        </items>
+                    </email>
+                    <campaign
+                        cq:showOnCreate="{Boolean}false"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Adobe Campaign"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <template
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="mcm/campaign/components/touch-ui/templatepicker"
+                                        fieldLabel="Template"
+                                        labelName="./acTemplateLabel"
+                                        name="./acTemplateId"
+                                        pageSize="{Long}20"
+                                        path="${empty param.item ? requestPathInfo.suffix : param.item}"
+                                        renderReadOnly="{Boolean}true"/>
+                                </items>
+                            </columns>
+                        </items>
+                    </campaign>
+                    <cloudservices
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="foundation/components/page/cq:dialog/content/items/tabs/items/cloudservices"/>
+                </items>
+            </tabs_new>
+        </items>
+    </content>
+</jcr:root>

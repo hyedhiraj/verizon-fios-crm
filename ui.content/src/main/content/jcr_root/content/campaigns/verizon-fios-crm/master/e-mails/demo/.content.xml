@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/default"
+        cq:lastModified="{Date}2018-12-14T12:01:39.542-06:00"
+        cq:lastModifiedBy="admin"
+        cq:targetEngine="cq_campaign"
+        cq:template="/apps/verizon-fios-crm/templates/acEmailCustom"
+        jcr:description="demo description"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="demo"
+        sling:resourceType="verizon-fios-crm/components/structure/acEmailCustom"
+        acMapping="mapRecipient"
+        acTemplateId="mailAEMContent"
+        acTemplateLabel="Email delivery with AEM content - custom"
+        teaserPageType="newsletter">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="mcm/campaign/components/parsys">
+            <heroimage
+                jcr:created="{Date}2018-12-07T12:07:02.326-06:00"
+                jcr:createdBy="admin"
+                jcr:description="Don't turn your back on him."
+                jcr:lastModified="{Date}2018-12-13T21:49:44.678-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="verizon-fios-crm/components/content/heroImage"
+                fileReference="/content/dam/verizon-fios-crm/heroImage-ray-donovan.png"
+                imageRotate="0">
+                <heroLogo
+                    jcr:description="Showtime Logo"
+                    jcr:lastModified="{Date}2018-12-07T12:45:14.551-06:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    fileReference="/content/dam/verizon-fios-crm/showtime-logo.png"
+                    imageRotate="0"/>
+                <globalCTA
+                    jcr:primaryType="nt:unstructured"
+                    cssClass="[white,_blank]"
+                    label="Learn more"
+                    link="#"/>
+                <heroDescription
+                    jcr:primaryType="nt:unstructured"
+                    background="none"
+                    fontColor="#fff"
+                    fontSize="24px"
+                    fontWeight="bold"
+                    text="Ray Donovan"
+                    textIsRich="true"/>
+                <link
+                    jcr:primaryType="nt:unstructured"
+                    cssClass="_blank"
+                    href="/content/campaigns/verizon-fios-crm/master/e-mails/demo"
+                    label="Learn more"/>
+            </heroimage>
+            <textimage
+                jcr:altImage="Sign up"
+                jcr:created="{Date}2018-12-13T17:19:31.653-06:00"
+                jcr:createdBy="admin"
+                jcr:description="&lt;p>We hope you’ve been enjoying your three \u0003months of complimentary SHOWTIME®. Now \u0003it’s time to subscribe, so you can continue \u0003enjoying critically acclaimed original series like Ray Donovan, sports programming like Inside \u0003the NFL™, hit movies and more.&lt;/p>&#xa;&lt;p>Watch when you want, with Fios® On Demand \u0003and SHOWTIME ON DEMAND®. And take SHOWTIME to go with the Fios TV app.*&lt;/p>&#xa;&lt;p>&lt;b>Subscribe to SHOWTIME on channel 365 SD \u0003or 865 HD.&lt;/b>&lt;/p>&#xa;"
+                jcr:lastModified="{Date}2018-12-13T21:25:46.298-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:pathImage="/content/campaigns/verizon-fios-crm/master/e-mails/my_new_email"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="verizon-fios-crm/components/content/textImage"
+                alignment="leftImageRightText"
+                fileReference="/content/dam/verizon-fios-crm/textSpotlight-sign-up.png"
+                imageRotate="0"/>
+            <columncontrol
+                jcr:created="{Date}2018-12-13T20:40:32.139-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-12-13T20:40:40.675-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="verizon-fios-crm/components/content/columnControl"
+                columns="2">
+                <_x0030_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="mcm/campaign/components/parsys">
+                    <image
+                        jcr:created="{Date}2018-12-13T20:40:46.141-06:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2018-12-14T12:01:26.797-06:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="mcm/campaign/components/image"
+                        alt="Escape at Dannemora"
+                        fileReference="/content/dam/verizon-fios-crm/promoSpotlight-escape-at-dannemora.png"
+                        imageRotate="0"/>
+                </_x0030_>
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="mcm/campaign/components/parsys">
+                    <image
+                        jcr:created="{Date}2018-12-13T20:41:50.488-06:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2018-12-14T12:01:39.534-06:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="mcm/campaign/components/image"
+                        alt="Inside the NFL"
+                        fileReference="/content/dam/verizon-fios-crm/promoSpotlight-NFL.png"
+                        imageRotate="0"/>
+                </_x0031_>
+            </columncontrol>
+        </par>
+    </jcr:content>
+</jcr:root>

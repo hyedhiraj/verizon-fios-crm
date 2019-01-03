@@ -1,0 +1,41 @@
+// ----------------------------------
+// 	global.scss
+// 	Global styles for all HTML elements
+// 	Imported by "base.scss"
+//  All vars/mixins/functions are located in "scss/_vars.scss"
+// ----------------------------------
+:root {
+  --brand-background: #{$brand-background};
+  --brand-subject-line-bg-color: #{$brand-subject-line-bg-color};
+  --brand-subject-line-text-color: #{$brand-subject-line-text-color};
+  --brand-header-announcement-bg-color: #{$brand-header-announcement-bg-color};
+  --brand-header-announcement-text-color: #{$brand-header-announcement-text-color};
+  --brand-header-navigation-bg-color: #{$brand-header-navigation-bg-color};
+  --brand-header-navigation-text-color: #{$brand-header-navigation-text-color};
+  --brand-footer-navigation-bg-color: #{$brand-footer-navigation-bg-color};
+  --brand-footer-navigation-text-color: #{$brand-footer-navigation-text-color};
+  --brand-advertisement-navigation-bg-color: #{$brand-advertisement-bg-color};
+  --brand-advertisement-navigation-text-color: #{$brand-advertisement-text-color};
+  --brand-right-side-bg-color: #{$brand-right-side-bg-color};
+  --brand-right-side-text-color: #{$brand-right-side-text-color};
+  --brand-left-side-bg-color: #{$brand-left-side-bg-color};
+  --brand-left-side-text-color: #{$brand-left-side-text-color};
+  --brand-hero-image-text-color: #{$brand-hero-image-text-color};
+  --brand-left-image-text-color: #{$brand-left-image-text-color};
+  --brand-right-image-text-color: #{$brand-right-image-text-color};
+
+  --global-padding-left: #{$global-padding-left};
+  --global-padding-right: #{$global-padding-right};
+  --global-padding-top: #{$global-padding-top};
+  --global-padding-bottom: #{$global-padding-bottom};
+
+  --img-alt-text-color: #{$img-alt-text-color};
+
+  
+
+
+}
+
+
+//For visual debug
+//*{ border: 1px solid red; }

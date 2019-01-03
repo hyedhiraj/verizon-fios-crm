@@ -1,0 +1,76 @@
+<body
+    style="
+	    width:100%;
+	    margin: 0;
+	    padding: 0;
+	    background-color: #353535;
+	    font-family:Arial, sans-serif;
+	    mso-line-height-rule:exactly;
+	    -webkit-font-smoothing:antialiased;
+	    -ms-text-size-adjust:none !important;"
+	    data-sly-use.body="body.js"
+	    data-sly-use.wcmInit="initwcm.js">
+    <!--[if lt IE 10]>
+    <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+    </p>
+    <![endif]-->
+    <table id="ac-body-table" border="0" cellpadding="0" cellspacing="0"
+           style="
+           	border-collapse: collapse; 
+           	height: 100%;
+           	width: 100%;
+           	max-width: 1280px;
+	        margin: 0 auto;
+           	padding: 0; 
+           	background-color: #353535;">
+        <tr data-sly-test="${!wcmmode.disabled}">
+            <td>
+                <div data-sly-resource="${resource.path @ resourceType='mcm/campaign/components/status'}"
+                     data-sly-unwrap></div>
+            </td>
+        </tr>
+        <tr>
+            <td id="ac-body-cell" align="left" valign="top">
+                <table id="ac-content-table" border="0" cellpadding="0" cellspacing="0"
+                       style="
+                       	border-collapse: collapse; 
+                       	height: 100%; 
+                       	width: 100%; 
+                       	margin: 0;
+                       	padding: 0; 
+                       	background-color: #FFF;">
+                    <tr>
+                        <td id="ac-preheader-cell" align="left" valign="top">
+                        	<sly data-sly-include="tools/header.html" data-sly-unwrap/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="top">
+                            <table id="ac-columns-table" border="0" cellpadding="0" cellspacing="0"
+                                   style="
+                                   		border-collapse: collapse; 
+                                   		height: 100%; 
+                                   		width: 100%; 
+                                   		margin: 0; 
+                                   		padding: 0;">
+                                <tr>
+                                    <td class="ac-content-cell" valign="top">
+                                        <div data-sly-resource="${'par' @ resourceType='mcm/campaign/components/parsys'}" data-sly-unwrap></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="ac-footer-cell" align="left" valign="top">
+                            <sly data-sly-include="tools/footer.html" data-sly-unwrap/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div data-sly-resource="${'cloudservices' @ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}" data-sly-unwrap></div>
+</body>

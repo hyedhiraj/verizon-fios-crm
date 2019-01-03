@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Sample newsletter template with two columns for Adobe Campaign 6.1"
+    jcr:primaryType="cq:Template"
+    jcr:title="Adobe Campaign Custom Email (AC 6.1)"
+    allowedPaths="[/content/campaigns(/.*)?/e-mails(/.*)?]"
+    ranking="{Long}1002">
+    <jcr:content
+        cq:designPath="/etc/designs/default"
+        cq:targetEngine="cq_campaign"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="verizon-fios-crm/components/structure/acEmailCustom"
+        acMapping="mapRecipient"
+        acTemplateId="mailAEMContentCustom"
+        acTemplateLabel="Email delivery with AEM content - custom"
+        teaserPageType="newsletter">
+        <teaser
+            jcr:lastModified="{Date}2013-12-11T18:10:43.886+01:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="mcm/campaign/components/personalization"
+            text="&lt;p>Short teaser (is displayed as a preview in some email clients)&lt;/p>"
+            textIsRich="true"/>
+        <redirect
+            jcr:lastModified="{Date}2013-12-11T18:10:43.886+01:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="mcm/campaign/components/personalization"
+            text="&lt;p style=&quot;text-align: right;&quot;>&amp;lt;%@ include view=&amp;quot;MirrorPage&amp;quot; %&amp;gt;&lt;/p>"
+            textIsRich="true"/>
+    </jcr:content>
+</jcr:root>

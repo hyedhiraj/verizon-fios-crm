@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Text">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <text
+                jcr:primaryType="cq:Widget"
+                fieldLabel="Text"
+                name="./text"
+                xtype="textfield">
+            <rtePlugins jcr:primaryType="nt:unstructured">
+                <links jcr:primaryType="nt:unstructured">
+                    <linkDialogConfig
+                            jcr:primaryType="nt:unstructured"
+                            height="{Long}316">
+                        <linkAttributes jcr:primaryType="cq:WidgetCollection">
+                            <linkAdvanced
+                                    jcr:primaryType="cq:Widget"
+                                    collapsed="{Boolean}true"
+                                    collapsible="{Boolean}true"
+                                    inputValue="advanced"
+                                    name="./linkdialog/cq:adhocLinkTrackingTab"
+                                    title="Link tracking"
+                                    xtype="dialogfieldset">
+                                <items jcr:primaryType="cq:WidgetCollection">
+                                    <enable
+                                            jcr:primaryType="nt:unstructured"
+                                            attribute="enabletracking"
+                                            fieldDescription="override analytics framework settings"
+                                            fieldLabel="Custom link tracking"
+                                            name="./linkdialog/cq:adhocLinkTrackingEnableTracking"
+                                            xtype="checkbox">
+                                        <listeners
+                                                jcr:primaryType="nt:unstructured"
+                                                check="function(component){var dlg=component.findParentByType('rtelinkdialog');dlg.enableSCFields(component.checked);}"/>
+                                    </enable>
+                                    <events
+                                            jcr:primaryType="nt:unstructured"
+                                            attribute="adhocevents"
+                                            fieldDescription="e.g.: event2, event7"
+                                            fieldLabel="Include SiteCatalyst events"
+                                            name="./linkdialog/cq:adhocLinkTrackingEvents"
+                                            xtype="textfield"/>
+                                    <evars
+                                            jcr:primaryType="nt:unstructured"
+                                            attribute="adhocevars"
+                                            fieldDescription="e.g.: eVar1: pagedata.url, prop4: 'const'"
+                                            fieldLabel="Include SiteCatalyst variables"
+                                            name="./linkdialog/cq:adhocLinkTrackingEvars"
+                                            xtype="textfield"/>
+                                </items>
+                            </linkAdvanced>
+                        </linkAttributes>
+                    </linkDialogConfig>
+                </links>
+                <misctools
+                        jcr:primaryType="nt:unstructured"
+                        features="*"/>
+            </rtePlugins>
+        </text>
+        <isRichTextFlag
+                jcr:primaryType="cq:Widget"
+                ignoreData="{Boolean}true"
+                name="./textIsRich"
+                value="true"
+                xtype="hidden"></isRichTextFlag>
+        <fontSize
+                jcr:primaryType="cq:Widget"
+                fieldLabel="Select Font Size"
+                name="./fontSize"
+                type="select"
+                xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <o1
+                        jcr:primaryType="nt:unstructured"
+                        text="Small"
+                        value="24px"/>
+                <o2
+                        jcr:primaryType="nt:unstructured"
+                        text="Medium"
+                        value="50px"/>
+                <o3
+                        jcr:primaryType="nt:unstructured"
+                        text="Large"
+                        value="93px"/>
+            </options>
+        </fontSize>
+        <fontColor
+                jcr:primaryType="cq:Widget"
+                fieldLabel="Select Font Color"
+                name="./fontColor"
+                type="select"
+                xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <o1
+                        jcr:primaryType="nt:unstructured"
+                        text="Black"
+                        value="#303030"/>
+                <o2
+                        jcr:primaryType="nt:unstructured"
+                        text="Gray"
+                        value="#747676"/>
+                <o3
+                        jcr:primaryType="nt:unstructured"
+                        text="White"
+                        value="#fff"/>
+            </options>
+        </fontColor>
+        <fontWeight
+                jcr:primaryType="cq:Widget"
+                fieldLabel="Select Font Weight"
+                name="./fontWeight"
+                type="select"
+                xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <o1
+                        jcr:primaryType="nt:unstructured"
+                        text="Normal"
+                        value="normal"/>
+                <o2
+                        jcr:primaryType="nt:unstructured"
+                        text="Bold"
+                        value="bold"/>
+            </options>
+        </fontWeight>
+        <background
+                jcr:primaryType="cq:Widget"
+                fieldLabel="Select background"
+                name="./background"
+                type="select"
+                xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <o1
+                        jcr:primaryType="nt:unstructured"
+                        text="None"
+                        value="none"/>
+                <o2
+                        jcr:primaryType="nt:unstructured"
+                        text="Gray"
+                        value="#d9dbdb"/>
+                <o3
+                        jcr:primaryType="nt:unstructured"
+                        text="White"
+                        value="#fff"/>
+                <o4
+                        jcr:primaryType="nt:unstructured"
+                        text="Black"
+                        value="#000"/>
+            </options>
+        </background>
+    </items>
+</jcr:root>

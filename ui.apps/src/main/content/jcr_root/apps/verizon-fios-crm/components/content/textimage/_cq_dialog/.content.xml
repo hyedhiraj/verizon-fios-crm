@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="nt:unstructured"
-    jcr:title="Text &amp; Image - Responsive"
-    sling:resourceType="cq/gui/components/authoring/dialog"
-    helpPath="https://www.adobe.com/go/aem6_3_docs_component_en#Text &amp; Image">
+    jcr:title="Text &amp; Image-Responsive"
+    sling:resourceType="cq/gui/components/authoring/dialog">
     <content
         jcr:primaryType="nt:unstructured"
         sling:resourceType="granite/ui/components/foundation/container">
         <layout
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
-            type="nav"/>
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
         <items jcr:primaryType="nt:unstructured">
-            <text
+            <tabTextImage
                 jcr:primaryType="nt:unstructured"
-                jcr:title="Text Configurations"
+                jcr:title="Text and Image Spotlight"
                 sling:resourceType="granite/ui/components/foundation/section">
                 <layout
                     jcr:primaryType="nt:unstructured"
@@ -25,35 +23,62 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/container">
                         <items jcr:primaryType="nt:unstructured">
-                            <text
+                            <alignment
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldLabel="Layout Alignment"
+                                name="./alignment">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Right Image Left Text"
+                                        value="rightImageLeftText"/>
+                                    <link
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Left Image Right Text"
+                                        value="leftImageRightText"/>
+                                </items>
+                            </alignment>
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                autoStart="{Boolean}false"
+                                class="cq-droptarget"
+                                fieldDescription="Description Image field."
+                                fieldLabel="Image"
+                                fileNameParameter="./image/fileName"
+                                fileReferenceParameter="./image/fileReference"
+                                mimeTypes="[image]"
+                                multiple="{Boolean}false"
+                                name="./image/file"
+                                title="Image"
+                                uploadUrl="${suffix.path}"
+                                useHTML5="{Boolean}true"/>
+                            <alt
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Alt Text"
+                                fieldLabel="Alt Tex"
+                                name="./jcr:alt"/>
+                            <href
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="Destination link image"
+                                fieldLabel="Destination link image"
+                                name="./jcr:href"/>
+                            <description
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="cq/gui/components/authoring/dialog/richtext"
-                                fieldLabel="Title"
-                                name="./text"
+                                name="./jcr:description"
                                 useFixedInlineToolbar="{Boolean}true">
                                 <rtePlugins jcr:primaryType="nt:unstructured">
+                                    <subsuperscript
+                                        jcr:primaryType="nt:unstructured"
+                                        features="*"/>
                                     <format
                                         jcr:primaryType="nt:unstructured"
                                         features="*"/>
                                     <justify
-                                        jcr:primaryType="nt:unstructured"
-                                        features="*"/>
-                                    <lists
-                                        jcr:primaryType="nt:unstructured"
-                                        features="*"/>
-                                    <paraformat
-                                        jcr:primaryType="nt:unstructured"
-                                        features="*"/>
-                                    <links
-                                        jcr:primaryType="nt:unstructured"
-                                        features="*"/>
-                                    <image
-                                        jcr:primaryType="nt:unstructured"
-                                        features="*"/>
-                                    <findreplace
-                                        jcr:primaryType="nt:unstructured"
-                                        features="*"/>
-                                    <subsuperscript
                                         jcr:primaryType="nt:unstructured"
                                         features="*"/>
                                     <spellcheck
@@ -61,7 +86,7 @@
                                         features="*"/>
                                     <misctools
                                         jcr:primaryType="nt:unstructured"
-                                        features="*">
+                                        features="[specialchars]">
                                         <specialCharsConfig jcr:primaryType="nt:unstructured">
                                             <chars jcr:primaryType="nt:unstructured">
                                                 <copyright
@@ -85,33 +110,16 @@
                                             </chars>
                                         </specialCharsConfig>
                                     </misctools>
-                                    <styles
-                                        jcr:primaryType="nt:unstructured"
-                                        features="*">
-                                        <styles jcr:primaryType="nt:unstructured">
-                                            <plainSpan
-                                                jcr:primaryType="nt:unstructured"
-                                                cssName="defaultSpan"
-                                                text="Default (add span tag)"/>
-                                            <lead
-                                                jcr:primaryType="nt:unstructured"
-                                                cssName="lead"
-                                                text="Lead"/>
-                                        </styles>
-                                    </styles>
-                                    <table
-                                        jcr:primaryType="nt:unstructured"
-                                        features="*"/>
                                 </rtePlugins>
                                 <uiSettings jcr:primaryType="nt:unstructured">
                                     <cui jcr:primaryType="nt:unstructured">
                                         <inline
                                             jcr:primaryType="nt:unstructured"
-                                            toolbar="[format#bold,format#italic,format#underline,#justify,#lists,subsuperscript#subscript,subsuperscript#superscript,links#modifylink,links#unlink,links#anchor,#image,findreplace#find,findreplace#replace,spellcheck#checktext,misctools#specialchars,misctools#sourceedit,#styles,#paraformat,table#table]">
+                                            toolbar="[format#bold,format#italic,format#underline,#paraformat,image#imageProps,#justify,#lists,links#modifylink,links#unlink,findreplace#find,findreplace#replace,subsuperscript#subscript,subsuperscript#superscript,spellcheck#checktext,misctools#specialchars]">
                                             <popovers jcr:primaryType="nt:unstructured">
                                                 <justify
                                                     jcr:primaryType="nt:unstructured"
-                                                    items="[justify#justifyleft,justify#justifycenter,justify#justifyright]"
+                                                    items="[justify#justifyleft]"
                                                     ref="justify"/>
                                                 <lists
                                                     jcr:primaryType="nt:unstructured"
@@ -121,75 +129,15 @@
                                                     jcr:primaryType="nt:unstructured"
                                                     items="paraformat:getFormats:paraformat-pulldown"
                                                     ref="paraformat"/>
-                                                <styles
-                                                    jcr:primaryType="nt:unstructured"
-                                                    items="styles:getStyles:styles-pulldown"
-                                                    ref="styles"/>
                                             </popovers>
                                         </inline>
                                     </cui>
                                 </uiSettings>
-                            </text>
-                            <alignment
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/foundation/form/select"
-                                fieldLabel="Alignment"
-                                name="./alignment">
-                                <items jcr:primaryType="nt:unstructured">
-                                    <rightImageLeftText
-                                        jcr:primaryType="nt:unstructured"
-                                        text="Right Image Left Text"
-                                        value="left"/>
-                                    <leftImageRightText
-                                        jcr:primaryType="nt:unstructured"
-                                        text="Left Image Right Text"
-                                        value="right"/>
-                                </items>
-                            </alignment>
+                            </description>
                         </items>
                     </column>
                 </items>
-            </text>
-            <image
-                jcr:primaryType="nt:unstructured"
-                jcr:title="Image &amp; Style Configurations"
-                sling:resourceType="granite/ui/components/foundation/section">
-                <layout
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
-                    margin="{Boolean}false"/>
-                <items jcr:primaryType="nt:unstructured">
-                    <column
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/foundation/container">
-                        <items jcr:primaryType="nt:unstructured">
-                            <image
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
-                                fieldLabel="Image"
-                                name="./fileReference"
-                                rootPath="/content/dam"/>
-                            <alt
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                fieldDescription="(leave empty to use the title defined above)"
-                                fieldLabel="Alt Text"
-                                name="./alt"/>
-                            <linkURL
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
-                                fieldLabel="Link to"
-                                name="./linkURL"
-                                rootPath="/content"/>
-                            <title
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                fieldLabel="Title"
-                                name="./title"/>
-                        </items>
-                    </column>
-                </items>
-            </image>
+            </tabTextImage>
         </items>
     </content>
 </jcr:root>

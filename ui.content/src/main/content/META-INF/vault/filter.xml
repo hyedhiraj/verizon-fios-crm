@@ -2,4 +2,6 @@
 <workspaceFilter version="1.0">
     <filter root="/content/verizon-fios-crm"/>
     <filter root="/content/dam/verizon-fios-crm"/>
+    <filter root="/content/tools"/>
+    <filter roor="/content/campaigns/verizon-fios-crm"/>
 </workspaceFilter>

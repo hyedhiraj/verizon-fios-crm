@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-12-02T15:18:38.736-05:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2018-10-12T11:20:33.504-07:00"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/verizon-fios-crm/templates/emptyPage"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Footer"
+        jcr:uuid="4319cf11-484e-4447-92ac-eeb13bd1f89e"
+        sling:resourceType="verizon-fios-crm/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <footernavigation
+                jcr:created="{Date}2018-11-24T22:18:00.125-06:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-11-26T14:21:51.404-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="verizon-fios-crm/components/content/footerNavigation">
+                <links jcr:primaryType="nt:unstructured">
+                    <linkItem-1
+                        jcr:primaryType="nt:unstructured"
+                        href="/content/phonegap/geometrixx-outdoors/en"
+                        label="My Verizon"/>
+                    <linkItem-2
+                        jcr:primaryType="nt:unstructured"
+                        href="/content/campaigns/geometrixx-outdoors"
+                        label="Support"/>
+                    <linkItem-3
+                        jcr:primaryType="nt:unstructured"
+                        href="/content/mobileapps/geometrixx-unlimited/collections"
+                        label="Update Email"/>
+                </links>
+                <socialMedia
+                    jcr:lastModified="{Date}2018-11-26T14:22:22.535-06:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="verizon-fios-crm/components/content/socialMedia"
+                    facebookLink="/content/campaigns/geometrixx"
+                    twitterLink="/content/mobileapps/geometrixx-unlimited"
+                    youtubeLink="/content/forms/af/geometrixx-gov/addressInformation"/>
+                <richText
+                    jcr:lastModified="{Date}2018-12-02T15:18:38.732-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="verizon-fios-crm/components/content/rte"
+                    rte="&lt;p>ADVERTISEMENT&lt;/p>&#xd;&#xa;&lt;p>*Req. compatible device and Fios TV. Content restrictions may apply. Full channel access req. Multi-Room DVR enhaced or Premium Service. Max. combined 4 simultaneus Live TV streams per media server.&lt;/p>&#xd;&#xa;&lt;p>SHOWTIME® and related marks are trademarks of Showtime Networks Inc., a CBS Company. You must be a subscriber of SHOWTIME to receive SHOWTIME ON DEMAND and SHOWTIME ANYTIME. All rights reserved.&lt;/p>&#xd;&#xa;&lt;p>&lt;i>Ray Donovan&lt;/i> © Showtime Networks Inc. All rights reserved. Inside the NFL © 2018 NFL Productions LLC. All NFL-related names, marks and logos are trademarks of the National Football League.&amp;nbsp;All rights reserved. Escape at Dannemora © Showtime Networks Inc. All rights reserved.&lt;/p>&#xd;&#xa;&lt;p>This email was sent to xxxxx@xxx.com&lt;/p>&#xd;&#xa;&lt;p>Verizon is dedicated to protecting your privacy. &lt;a href=&quot;#&quot; style=&quot;text-decoration: underline; color: var(--brand-advertisement-text-color);&quot;>Privacy&amp;nbsp;Policy&lt;/a>.&lt;/p>&#xd;&#xa;&lt;p>You may adjust your &lt;a href=&quot;#&quot; style=&quot;text-decoration: underline; color: var(--brand-advertisement-text-color);&quot;>preferences&lt;/a> or &lt;a href=&quot;#&quot; style=&quot;text-decoration: underline; color: var(--brand-advertisement-text-color);&quot;>unsubscribe&lt;/a> from Verizon promotional emails at any time.&lt;/p>&#xd;&#xa;&lt;p>© 2018 Verizon. All Rights Reserved.&lt;/p>&#xd;&#xa;&lt;p>Verizon Services Corp. | One Verizon Way | Basking Ridge, NJ 07920&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+            </footernavigation>
+        </root>
+    </jcr:content>
+</jcr:root>

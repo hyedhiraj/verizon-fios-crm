@@ -1,0 +1,41 @@
+<sly data-sly-use.model="${'com.verizon.fios.core.models.content.text.TextComponentModel'}"/>
+<div data-sly-test="${wcmmode.edit}" style="min-height: 40px;max-height: 300px;" data-emptytext="Text Component"
+	 class="cq-placeholder cq-marker-start">
+</div>
+<!-- Option background none  -->
+<!-- small text -->
+<div data-sly-test="${model.fontSize == '24px'}"
+	 style="
+		background-color: ${model.background @ context='styleToken'};
+        border-collapse:collapse;
+        mso-table-lspace:0;
+        mso-table-rspace:0;
+        color: ${model.fontColor @ context='styleToken'};
+        font-size: ${model.fontSize @ context='styleToken'};
+        font-weight: ${model.fontWeight @ context='styleToken'};">
+	${model.text @ context='html'}
+</div>
+<!-- large text -->
+<div data-sly-test="${model.fontSize == '93px'}"
+	 style="
+	background-color: ${model.background @ context='styleToken'};
+	border-collapse:collapse;
+	mso-table-lspace:0;
+	mso-table-rspace:0;
+	color: ${model.fontColor @ context='styleToken'};
+	font-size: ${model.fontSize @ context='styleToken'};
+	font-weight: ${model.fontWeight @ context='styleToken'};">
+	${model.text @ context='html'}
+</div>
+<!-- medium text -->
+<div data-sly-test="${model.fontSize == '50px'}"
+	 style="
+		background-color: ${model.background @ context='styleToken'};
+		color: ${model.fontColor @ context='styleToken'};
+		font-size: ${model.fontSize @ context='styleToken'};
+		line-height: 1;
+		margin: 0;
+		font-weight: ${model.fontWeight @ context='styleToken'};
+		mso-line-height-rule: exactly;">
+	${model.text @ context='html'}
+</div>

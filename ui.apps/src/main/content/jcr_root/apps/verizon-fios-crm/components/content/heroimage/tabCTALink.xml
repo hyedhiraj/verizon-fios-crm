@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="CTA Link">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <label
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Text"
+            name="./link/label"
+            xtype="textfield"/>
+        <link
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Link"
+            name="./link/href"
+            xtype="browsefield"/>
+        <target
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Anchor Target"
+            name="./link/cssClass"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <o1
+                    jcr:primaryType="nt:unstructured"
+                    selected="{Boolean}true"
+                    text="None"
+                    value=""/>
+                <o2
+                    jcr:primaryType="nt:unstructured"
+                    text="Blank"
+                    value="_blank"/>
+            </options>
+        </target>
+    </items>
+</jcr:root>

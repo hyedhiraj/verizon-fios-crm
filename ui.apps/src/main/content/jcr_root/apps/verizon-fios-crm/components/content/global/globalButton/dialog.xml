@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+  jcr:primaryType="cq:Panel"
+  title="Global Button">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <text
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Text"
+            name="./label"
+            xtype="textarea"/>
+        <link
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Link"
+            name="./link"
+            xtype="browsefield"/>
+        <buttonType
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Button Type"
+            name="./cssClass"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <o1
+                    jcr:primaryType="nt:unstructured"
+                    text="White"
+                    value="white"/>
+                <o2
+                    jcr:primaryType="nt:unstructured"
+                    text="Black"
+                    value="black"/>
+            </options>
+        </buttonType>
+        <target
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Anchor Target"
+            name="./cssClass"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <o1
+                    jcr:primaryType="nt:unstructured"
+                    selected="{Boolean}true"
+                    text="None"
+                    value=""/>
+                <o2
+                    jcr:primaryType="nt:unstructured"
+                    text="Blank"
+                    value="_blank"/>
+            </options>
+        </target>
+    </items>
+</jcr:root>

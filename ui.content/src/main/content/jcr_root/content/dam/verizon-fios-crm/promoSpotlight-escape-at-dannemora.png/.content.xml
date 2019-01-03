@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="e886c32e-8533-4410-ac1b-7d1262c4a802">
+    <jcr:content
+        dam:relativePath="verizon-fios-crm/promoSpotlight-escape-at-dannemora.png"
+        jcr:lastModified="{Date}2018-12-14T12:00:36.525-06:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}32"
+            dam:Comments="Raw profile type iptc: &#xa;iptc&#xa;      56&#xa;3842494d040400000000002c1c015a00031b25471c0237000832303138313231331c0200&#xa;000200001c023c000b3231313430322d32313134&#xa;&#xa;"
+            dam:extracted="{Date}2018-12-14T12:00:35.619-06:00"
+            dam:Fileformat="PNG"
+            dam:MIMEtype="image/png"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}1"
+            dam:Physicalheightindpi="{Long}144"
+            dam:Physicalheightininches="{Decimal}5.0002570152282715"
+            dam:Physicalwidthindpi="{Long}144"
+            dam:Physicalwidthininches="{Decimal}5.0002570152282715"
+            dam:Progressive="no"
+            dam:sha1="cab2aeb7bfa3b376d0249b982fc63db5705a4ba8"
+            dam:size="{Long}1014452"
+            dc:format="image/png"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}720"
+            tiff:ImageWidth="{Long}720"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:lastReplicated="{Date}2018-08-08T09:18:09.040-07:00"
+    cq:lastReplicatedBy="mmaisak@merkleinc.com"
+    cq:lastReplicationAction="Activate"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
+    jcr:primaryType="sling:OrderedFolder"
+    jcr:title="tools">
+    <header/>
+    <footer/>
+</jcr:root>
