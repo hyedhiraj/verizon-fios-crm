@@ -9,6 +9,7 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Optional;
 import org.apache.sling.models.annotations.Via;
+import org.apache.sling.models.annotations.injectorspecific.ChildResource;
 
 /**
  * Model for Image
@@ -20,13 +21,16 @@ public class ImageModel {
 
 	/** request var. */
 	private SlingHttpServletRequest slingHttpServletRequest;
-
+	
+	/**
+	 * Image resource
+	 */
+	@ChildResource(name="image")
+	private Resource image;
+	
 	/**
 	 * fileReference variable
 	 */
-	@Inject
-	@Via("resource")
-	@Optional
 	private String fileReference;
 
 	/**
@@ -100,7 +104,7 @@ public class ImageModel {
 	 * @return fileReference
 	 */
 	public String getFileReference() {
-		return fileReference;
+		return image.getValueMap().get("fileReference", String.class);
 	}
 
 	/**
